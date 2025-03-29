@@ -5,40 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的社團</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="eventlister.js"></script>
 </head>
 <body>
+    <!-- 頁首 -->
+    <header>
+        <img src="banner.jpg" alt="中央火舞橫幅" class="banner">
+    </header>
 
-<!--下拉式選單-->
-<nav>
-    <ul>
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="about.html">關於我們</a></li>
-        <li class="dropdown">
-            <a href="events.html" class="dropbtn">社團活動</a>
-            <div class="dropdown-content">
-                <a href="event_1.html">活動一</a>
-                <a href="event_2.html">活動二</a>
-                <a href="event_3.html">活動三</a>
-            </div>
-        </li>
-        <li><a href="join.html">加入我們</a></li>
-    </ul>
-</nav>
+    <!-- 隱藏式導覽選單 -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="event.html">活動介紹</a></li>
+            <li><a href="contact.html">合作資訊</a></li>
+        </ul>
+    </nav>
 
-<!-- 內容區 -->
-<header>
-    <h1>歡迎來到中央火舞藝術研究社！</h1>
-    <p>會進來這個社團的人都是一群怪人</p>
-</header>
+    <!-- 主要內容 -->
+    <main>
+        <h1>歡迎來到中央火舞藝術研究社！</h1>
+        <p>我們是一群熱愛表演、渴望舞台的大學生</p>
+        <p class="small-text">（同時也是享受那危險卻美麗的火焰在身體旁邊燒的怪人們）</p>
+    </main>
 
-<section class="intro">
-    <img src="club.jpg" alt="社團活動圖片" width="80%">
-    <p>我們的社團活動包括迎新、比賽、聚餐等，讓大家一起創造美好的回憶！</p>
-</section>
 
-<footer>
-    <p>召喚我們</p>
-</footer>
 
+    <!-- 頁尾 -->
+    <footer>
+        <!-- 社團資訊 -->
+        <div class="club-info">
+            <p>社課時間：每週一、四 19:00-21:00</p>
+            <p>社課地點：中央大學大講堂前廣場</p>
+        </div>
+        <!-- 加入我們 -->
+        <a href="join.html" class="apply-btn">加入我們</a>
+
+        <!-- 社團聯絡資訊 -->
+        <div class="social-links">
+            <a href="#" class="btn">
+                <img src="fb-icon.png" alt="Facebook">Facebook</a>
+            <a href="#" class="btn">
+                <img src="ig-icon.png" alt="Instagram">Instagram</a>
+            <a href="#" class="btn">
+                <img src="yt-icon.png" alt="YouTube">YouTube</a>
+        </div>
+    </footer>
 </body>
 </html>
