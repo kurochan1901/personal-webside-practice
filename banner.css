@@ -1,0 +1,33 @@
+/* 頁首區域 */
+.banner-container {
+    position: relative;
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;  /* 你可以根據需求調整高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* 文字層 */
+.banner-text {
+    text-align: center;
+    font-size: 2em;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    border-radius: 5px;
+}
+
+/* 標題樣式 */
+.banner-text h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* 文字描述 */
+.banner-text p {
+    font-size: 1.2em;
+}

@@ -1,0 +1,12 @@
+/* 設定表格邊框 */
+table {
+    border-collapse: collapse; /* 讓邊框合併，不會雙邊框 */
+    width: 100%; /* 讓表格佔滿可用空間 */
+}
+
+/* 設定所有表格的儲存格 (td & th) 都有邊框 */
+th, td {
+    border: 1px solid black; /* 1px 黑色邊框 */
+    padding: 8px; /* 增加內距 */
+    text-align: center; /* 文字置中 */
+}
