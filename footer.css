@@ -1,0 +1,119 @@
+/* 頁尾 */
+footer {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+
+/* 頁尾_社團資訊 */
+.class-info {
+    flex: 1;
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start;
+    white-space: nowrap; /* 避免內容斷行影響對齊 */
+    gap: 0; 
+    max-width: 100%; /* 防止超出頁面 */
+    overflow: hidden; /* 避免社團資訊超出 */
+}
+
+.class-info p {
+    margin: 0; /* 移除預設 margin */
+    padding: 0;
+    text-align: left;
+    line-height: 1.5;
+}
+
+
+/* 頁尾_加入我們 */
+.apply-btn{
+    background-color: #28a745; /* 綠色背景 */
+    color: white; /* 白色文字 */
+    padding: 10px 20px; /* 上下10px，左右20px的內邊距 */
+    border-radius: 5px; /* 圓角邊框 */
+    text-decoration: none; /* 去除下劃線 */
+    transition: background-color 0.3s ease; /* 背景顏色變化的過渡效果 */
+}
+/* 頁尾_加入我們_滑鼠懸停效果 */
+.apply-btn:hover {
+    background-color: #218838; /* 懸停時變成深綠色 */
+}
+/* 頁尾_加入我們_滑鼠懸停效果_按鈕 */
+.apply-btn:active {
+    transform: translateY(2px); /* 按下時稍微向下移動 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+}
+
+/* 頁尾的社群連結 */
+.social-links {
+    display: flex;
+    justify-content: flex-end; /* 讓按鈕靠右對齊 */
+    flex-wrap: wrap; /* 讓按鈕超過範圍時自動換行 */
+    gap: 10px; /* 增加按鈕間距 */
+    max-width: 100%; /* 防止超出頁面 */
+    overflow: hidden; /* 避免按鈕超出 */
+    padding-right: 30px; /* 讓按鈕不貼到頁面邊緣 */
+}
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #555;
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    white-space: nowrap; /* 防止文字換行 */
+}
+.social-links img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* 左側隱藏式選單 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    z-index: 10;
+    background: #333;
+    transition: left 0.3s ease-in-out;
+    padding-top: 20px;
+}
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.sidebar ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.sidebar ul li a {
+    display: block; /* 使整個區域可點擊 */
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    background: #333;
+    border-radius: 5px;
+}
+.sidebar ul li a:hover {
+    background: #555;
+}
+/* 當滑鼠靠近左側時顯示選單 */
+.sidebar.active {
+    left: 0;
+}

@@ -4,7 +4,7 @@
     background-image: url('banner.jpg');
     background-size: cover;
     background-position: center;
-    height: 400px;  /* 你可以根據需求調整高度 */
+    height: 120px;  /* 你可以根據需求調整高度 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,10 +13,14 @@
 
 /* 文字層 */
 .banner-text {
+    position: absolute;
+    width: 100%; /* 讓它填滿 banner */
     text-align: center;
+    margin: auto;
+    color: white;
     font-size: 2em;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
     border-radius: 5px;
 }
 
