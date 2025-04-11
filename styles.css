@@ -8,6 +8,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    line-height: 1.6;
 }
 
 /* 標題區 */
@@ -29,4 +30,59 @@ img {
 main {
     flex: 1;  /* 讓 `main` 佔滿可用空間 */
     padding-bottom: 60px; /* 預留 footer 的高度，避免被擋住 */
+    padding-top: 100px;
 }
+
+
+.intro-lines {
+    position: relative;
+    height: 4em; /* 確保容器有高度容納錯開的字 */
+    margin-bottom: 10px;
+}
+.left-line {
+    position: absolute;
+    left: 20%;                  /* 靠左但往右推一點，讓兩行有點重疊 */
+    top: 0;
+    font-size: 1.5rem;          /* 較大的字體 */
+    font-weight: bold;
+    transform: translateX(10px); /* 微調水平位置重疊感 */
+  }
+  .right-line {
+    position: absolute;
+    right: 20%;                  /* 靠右但往左推一點 */
+    top: 3em;                  /* 向下錯開一行的高度 */
+    font-size: 1rem;            /* 小一點的字體 */
+    color: #555;
+    transform: translateX(-10px); /* 微調重疊感 */
+  }
+
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    border-bottom: 2px solid #ccc;
+    min-height: 300px;
+  }
+
+.section-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+.section-image {
+    flex: 1;
+    text-align: right;
+  }
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+  }
