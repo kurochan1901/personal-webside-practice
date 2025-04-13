@@ -1,0 +1,52 @@
+/* 內容區 */
+.intro {
+    padding: 20px;
+}
+
+img {
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+main {
+    flex: 1;  /* 讓 `main` 佔滿可用空間 */
+    padding-bottom: 60px; /* 預留 footer 的高度，避免被擋住 */
+    padding-top: 100px;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    border-bottom: 2px solid #ccc;/
+  }
+
+.section-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+.section-image {
+    flex: 1;
+    text-align: right;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
+.video-wrapper {
+    padding: 20px;
+    border-radius: 10px; /* 圓角邊框 */
+    background-color: #f4f4f4; /* 淺灰色背景 */
+    flex: 1;
+    max-width: 500px;
+}

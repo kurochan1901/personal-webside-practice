@@ -1,30 +1,84 @@
-/* 設定表格邊框 */
-table {
-    border-collapse: collapse; /* 讓邊框合併，不會雙邊框 */
-    width: 100%; /* 讓表格佔滿可用空間 */
+/* CSS for the event page */
+/* intro section */
+main {
+  flex: 1;  /* 讓 `main` 佔滿可用空間 */
+  padding-top: 100px;
+  padding-bottom: 60px; /* 預留 footer 的高度，避免被擋住 */
+  margin-bottom: 5px; /* 縮小與表格的距離 */
 }
 
-/* 設定所有表格的儲存格 (td & th) 都有邊框 */
-th, td {
-    border: 1px solid black; /* 1px 黑色邊框 */
-    padding: 8px; /* 增加內距 */
-    text-align: center; /* 文字置中 */
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
 }
+
+.section-text {
+  flex: 1;
+  padding-right: 2rem;
+}
+.section-image {
+  flex: 1;
+  text-align: right;
+}
+
+/*表格*/
+table{
+  margin-top: 10px; /* 上方間距 */
+}
+
+caption {
+  font-family: "Arial", sans-serif; /* 設定字型 */
+  font-size: 26px; /* 設定字體大小 */
+  font-weight: bold; /* 設定字體粗細 */
+  color: #333; /* 設定文字顏色 */
+  text-align: start; /* 設定文字對齊方式 */
+  padding: 30px; /* 內距 */
+  margin-bottom: 5px; /* 與表格的間距 */
+}
+
+table.history {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto; /* 讓表格置中 */
+}
+
+table.history td {
+  text-align: left; /* 文字靠左排列 */
+  border: none; /* 移除所有邊框 */
+  padding: 20px; /* 增加內距 */
+  border-left: 1px solid #ccc; /* 只在左邊添加實線邊框 */
+}
+
+.highlight-cell {
+font-size: 20px; /* 字體大小 */
+color: rgb(16, 15, 17); /* 文字顏色 */
+font-weight: bold; /* 加粗 */
+}
+
 
 table.schedule {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-  }
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto; /* 讓表格置中 */
+  margin-bottom: 6%;
+}
   
-  table.schedule th,
-  table.schedule td {
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    text-align: center;
-  }
+table.schedule th,
+table.schedule td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+  padding: 8px; /* 增加內距 */
+  text-align: center; /* 文字置中 */
+}
   
-  table.schedule th {
-    background-color: #f7f7f7;
-  }
+table.schedule th {
+  background-color: #f7f7f7;
+}
   

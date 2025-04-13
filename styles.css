@@ -17,72 +17,62 @@ header {
     padding: 20px;
 }
 
-/* 內容區 */
-.intro {
-    padding: 20px;
-}
-
-img {
-    border-radius: 10px;
-    max-width: 100%;
-}
-
-main {
-    flex: 1;  /* 讓 `main` 佔滿可用空間 */
-    padding-bottom: 60px; /* 預留 footer 的高度，避免被擋住 */
-    padding-top: 100px;
-}
-
-
 .intro-lines {
     position: relative;
     height: 4em; /* 確保容器有高度容納錯開的字 */
-    margin-bottom: 10px;
+    margin-bottom: 150px;
 }
 .left-line {
     position: absolute;
     left: 20%;                  /* 靠左但往右推一點，讓兩行有點重疊 */
     top: 0;
-    font-size: 1.5rem;          /* 較大的字體 */
+    font-size: 2em;
+    margin-bottom: 2rem; /* 下方間距 */
     font-weight: bold;
     transform: translateX(10px); /* 微調水平位置重疊感 */
-  }
-  .right-line {
+}
+.right-line {
     position: absolute;
     right: 20%;                  /* 靠右但往左推一點 */
-    top: 3em;                  /* 向下錯開一行的高度 */
+    top: 5em;                  /* 向下錯開的高度 */
     font-size: 1rem;            /* 小一點的字體 */
     color: #555;
     transform: translateX(-10px); /* 微調重疊感 */
-  }
+}
 
-
-section {
+/* 左側隱藏式選單 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    z-index: 10;
+    background: #333;
+    transition: left 0.3s ease-in-out;
+    padding-top: 20px;
+}
+.sidebar ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 10%;
-    border-bottom: 2px solid #ccc;
-    min-height: 300px;
-  }
-
-.section-text {
-    flex: 1;
-    padding-right: 2rem;
+    flex-direction: column;
+    padding: 0;
 }
-.section-image {
-    flex: 1;
-    text-align: right;
-  }
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 1rem;
+.sidebar ul li {
+    list-style: none;
+    margin: 10px 0;
 }
-
-.video-wrapper iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-    border-radius: 10px;
-  }
+.sidebar ul li a {
+    display: block; /* 使整個區域可點擊 */
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    background: #333;
+    border-radius: 5px;
+}
+.sidebar ul li a:hover {
+    background: #555;
+}
+/* 當滑鼠靠近左側時顯示選單 */
+.sidebar.active {
+    left: 0;
+}
