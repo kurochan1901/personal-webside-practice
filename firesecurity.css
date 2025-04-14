@@ -17,10 +17,21 @@ section {
 .section-text {
     flex: 1;
     padding-right: 2rem;
+    text-align: left;
+    font-size: 0.9em; /* 調整字體大小 */
 }
+
+.section-text p {
+    font-size: 20px; /* 調整標題字體大小 */
+    margin-bottom: 1rem; /* 調整標題與內容的間距 */
+    color: #555;
+}
+
+
 .section-image {
     flex: 1;
     text-align: right;
+    padding-left: 2rem;
 }
 
 img {
@@ -63,6 +74,12 @@ img {
     border-left: 1px solid #ccc; /* 只在左邊添加實線邊框 */
   }
 
-  html {
-    scroll-behavior: smooth;
+  a {
+    color: inherit;         /* 跟隨父元素的顏色 */
+    text-decoration: none;  /* 移除底線 */
   }
+  
+  a:visited {
+    color: inherit;         /* 點過之後還是原本顏色 */
+  }
+  
