@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="sidebar.css">
     <script defer src="eventlister.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -33,7 +34,7 @@
     <h1>加入我們的社團！</h1>
     <p>請填寫以下表單，我們會盡快聯絡你。</p>
 
-    <form action="submit_form.php" method="post">
+    <form onsubmit="return handleFormSubmit(event)">
         <label for="name">姓名：</label>
         <input type="text" id="name" name="name" required>
 
@@ -45,6 +46,14 @@
 
         <button type="submit">送出</button>
     </form>
+    <script>
+        function handleFormSubmit(event) {
+          event.preventDefault();  // 阻止預設送出行為
+          window.location.href = "thankyou.html"; // 導向感謝頁
+          return false;
+        }
+      </script>
+
 </div>
 
 </body>
